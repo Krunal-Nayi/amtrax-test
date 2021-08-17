@@ -1,8 +1,7 @@
-<form class="example-form"> 
+<form class="example-form" [formGroup]="formData" (ngSubmit) = "onClickSubmit()"> 
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-        <button mat-button color="accent">Ok</button>
-        <button mat-button color="warn">Cancel</button>
+        <textarea matInput placeholder="Enter inputs|values" formControlName="questions" name="questions"></textarea>
+        <button mat-button color="accent" type="submit">Ok</button>
+        <button mat-button color="warn" (click)="onClickClear()">Cancel</button>
     </mat-form-field>
 </form>
