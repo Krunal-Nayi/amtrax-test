@@ -7,13 +7,16 @@ import { QuestionModel } from 'src/app/_models';
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit {
-  questionmodel: QuestionModel = new QuestionModel();
+  questions: QuestionModel[] = [
+                                { name: '1', type: 'text' },
+                                { name: '2', type: 'submit' },
+                                { name: '3', type: 'checkbox' },
+                                { name: '4', type: 'color' }
+                              ];
 
   constructor() { }
 
   ngOnInit(): void {
-    // this.questionmodel.name = ""
-    // this.questionmodel.type = ""
-  }
 
+  }
 }

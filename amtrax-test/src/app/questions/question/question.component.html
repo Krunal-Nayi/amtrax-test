@@ -1,6 +1,8 @@
-<form class="example-form"> 
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>{{ questionmodel.name }}</mat-label>
-        <input [type]="questionmodel.type" />
-    </mat-form-field>
+<form class="example-form">
+    <div class="row-form">
+        <div class="col-full" *ngFor="let question of questions">
+            <label>{{ question.name }}</label>
+            <input style="margin-left: 5px;" [type]="question.type" />
+        </div>
+    </div>
 </form>
